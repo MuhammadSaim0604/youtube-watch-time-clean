@@ -16,4 +16,4 @@ __pycache__/
 .idea/
 *.iml
 
-decompiled_app
+decompiled_app/
