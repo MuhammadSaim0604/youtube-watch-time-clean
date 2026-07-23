@@ -23,6 +23,7 @@ public class HomeActivity extends AppCompatActivity {
     private Button button4;
     private Button button5;
     private Button button6;
+    private Button button9;
     private Button button7;
     private Button button8;
 
@@ -44,6 +45,7 @@ public class HomeActivity extends AppCompatActivity {
         button4 = findViewById(R.id.button4);
         button5 = findViewById(R.id.button5);
         button6 = findViewById(R.id.button6);
+        button6 = findViewById(R.id.button9);
         button7 = findViewById(R.id.button7);
         button8 = findViewById(R.id.button8);
 
@@ -67,6 +69,7 @@ public class HomeActivity extends AppCompatActivity {
         button4.setOnClickListener(v -> openVideo(Video20Activity.class, "20"));
         button5.setOnClickListener(v -> openVideo(Video25Activity.class, "25"));
         button6.setOnClickListener(v -> openVideo(Video500Activity.class, "500"));
+        button5.setOnClickListener(v -> openVideo(Video100Activity.class, "100"));
         button7.setOnClickListener(v -> showMessage("Coming Soon"));
         button8.setOnClickListener(v -> openHowItWorks());
     }
@@ -93,11 +96,7 @@ public class HomeActivity extends AppCompatActivity {
         String host = parsed.getHost();
         return ("http".equalsIgnoreCase(parsed.getScheme())
                 || "https".equalsIgnoreCase(parsed.getScheme()))
-                && host != null
-                && (host.equalsIgnoreCase("youtube.com")
-                || host.endsWith(".youtube.com")
-                || host.equalsIgnoreCase("youtu.be")
-                || host.endsWith(".youtu.be"));
+                && host != null;
     }
 
     private void openHowItWorks() {
