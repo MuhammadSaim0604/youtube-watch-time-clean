@@ -55,6 +55,12 @@
             android:exported="false"
             android:parentActivityName=".HomeActivity" />
 
+        <activity
+            android:name=".Video500Activity"
+            android:exported="false"
+            android:parentActivityName=".HomeActivity" 
+            android:configChanges="orientation|screenSize" />
+
         <!-- Debug Activity -->
         <activity
             android:name=".DebugActivity"

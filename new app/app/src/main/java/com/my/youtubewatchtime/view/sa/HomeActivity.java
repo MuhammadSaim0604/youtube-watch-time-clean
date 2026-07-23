@@ -22,6 +22,7 @@ public class HomeActivity extends AppCompatActivity {
     private Button button3;
     private Button button4;
     private Button button5;
+    private Button button6;
     private Button button7;
     private Button button8;
 
@@ -42,6 +43,7 @@ public class HomeActivity extends AppCompatActivity {
         button3 = findViewById(R.id.button3);
         button4 = findViewById(R.id.button4);
         button5 = findViewById(R.id.button5);
+        button6 = findViewById(R.id.button6);
         button7 = findViewById(R.id.button7);
         button8 = findViewById(R.id.button8);
 
@@ -64,6 +66,7 @@ public class HomeActivity extends AppCompatActivity {
         button3.setOnClickListener(v -> openVideo(Video15Activity.class, "15"));
         button4.setOnClickListener(v -> openVideo(Video20Activity.class, "20"));
         button5.setOnClickListener(v -> openVideo(Video25Activity.class, "25"));
+        button6.setOnClickListener(v -> openVideo(Video500Activity.class, "500"));
         button7.setOnClickListener(v -> showMessage("Coming Soon"));
         button8.setOnClickListener(v -> openHowItWorks());
     }

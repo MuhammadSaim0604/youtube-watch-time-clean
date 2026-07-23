@@ -14,3 +14,9 @@ The app must use uniquely named application themes that inherit from AppCompat; 
 **Why:** The restored project previously declared a local `Theme.AppCompat.Light.DarkActionBar` style with the same name as its parent, causing the installed APK to fail when launching `HomeActivity`.
 
 **How to apply:** Keep `Theme.YoutubeWatchTime*`-style names in app resources and reference those names from the manifest.
+
+The generated 500-slot screen uses lightweight numbered visual tiles and one preview WebView; the generator is the source for the repeated XML and resource-ID sections.
+
+**Why:** A large grid can be represented without creating hundreds of simultaneous browser sessions, which keeps the clean copy resource-safe and within the no-artificial-view-inflation boundary.
+
+**How to apply:** Regenerate the screen with the Python tool after changing the slot count or generated structure, and keep the single-preview design.
