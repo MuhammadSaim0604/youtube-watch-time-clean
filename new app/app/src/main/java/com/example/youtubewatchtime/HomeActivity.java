@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 public final class HomeActivity extends Activity {
     private EditText urlInput;
+    private EditText countInput;
     private WebView preview;
 
     @Override
@@ -20,6 +21,7 @@ public final class HomeActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
         urlInput = findViewById(R.id.edittext2);
+        countInput = findViewById(R.id.preview_count);
         preview = findViewById(R.id.webview1);
         urlInput.setTextColor(Color.WHITE);
         urlInput.setHintTextColor(Color.WHITE);
@@ -28,13 +30,8 @@ public final class HomeActivity extends Activity {
         preview.getSettings().setSupportZoom(true);
         preview.setWebViewClient(new android.webkit.WebViewClient());
         findViewById(R.id.imageview1).setOnClickListener(v -> loadPreview());
-        findViewById(R.id.button1).setOnClickListener(v -> openVideo(Video5Activity.class));
-        findViewById(R.id.button2).setOnClickListener(v -> openVideo(Video10Activity.class));
-        findViewById(R.id.button3).setOnClickListener(v -> openVideo(Video15Activity.class));
-        findViewById(R.id.button4).setOnClickListener(v -> openVideo(Video20Activity.class));
-        findViewById(R.id.button5).setOnClickListener(v -> openVideo(Video25Activity.class));
-        findViewById(R.id.button7).setOnClickListener(v -> openVideo(Video1000Activity.class));
-        findViewById(R.id.button8).setOnClickListener(v -> openHowItWorksLink());
+        findViewById(R.id.open_custom_player).setOnClickListener(v -> openCustomPlayer());
+        findViewById(R.id.how_it_works_button).setOnClickListener(v -> openHowItWorksLink());
     }
 
     private void loadPreview() {
@@ -46,13 +43,25 @@ public final class HomeActivity extends Activity {
         preview.loadUrl(url);
     }
 
-    private void openVideo(Class<? extends Activity> activityClass) {
+    private void openCustomPlayer() {
         String url = urlInput.getText().toString().trim();
         if (!isHttpUrl(url)) {
             Toast.makeText(this, getString(R.string.invalid_url), Toast.LENGTH_SHORT).show();
             return;
         }
-        startActivity(new Intent(this, activityClass).putExtra(VideoActivity.EXTRA_URL, url));
+        int count;
+        try {
+            count = Integer.parseInt(countInput.getText().toString().trim());
+        } catch (NumberFormatException exception) {
+            count = 0;
+        }
+        if (count < 1 || count > 50) {
+            Toast.makeText(this, getString(R.string.count_required), Toast.LENGTH_SHORT).show();
+            return;
+        }
+        startActivity(new Intent(this, VideoCustomActivity.class)
+                .putExtra(VideoCustomActivity.EXTRA_URL, url)
+                .putExtra(VideoCustomActivity.EXTRA_COUNT, count));
     }
 
     private boolean isHttpUrl(String url) {

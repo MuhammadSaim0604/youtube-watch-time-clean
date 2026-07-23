@@ -9,15 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="false">
-        <activity
-            android:name=".VideoActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name=".Video5Activity" android:screenOrientation="portrait" />
-        <activity android:name=".Video10Activity" android:screenOrientation="portrait" />
-        <activity android:name=".Video15Activity" android:screenOrientation="portrait" />
-        <activity android:name=".Video20Activity" android:screenOrientation="portrait" />
-        <activity android:name=".Video25Activity" android:screenOrientation="portrait" />
-        <activity android:name=".Video1000Activity" android:screenOrientation="portrait" />
+        <activity android:name=".VideoCustomActivity" android:screenOrientation="portrait" />
         <activity
             android:name=".HomeActivity"
             android:screenOrientation="portrait" />

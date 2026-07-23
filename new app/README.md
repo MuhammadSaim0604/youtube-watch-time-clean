@@ -7,9 +7,9 @@ legitimate UI flow:
 - brown/pink home screen with the original URL input and controls
 - YouTube URL validation
 - one in-app WebView preview
-- explicit `main.xml`, `home.xml`, and `video5.xml` through `video25.xml` layouts
-- working `25 Views` and `1000 Views` controls matching the imported home screen
-- `tools/generate_1000_views.py` generates the `video1000.xml` layout and `Video1000Activity.java` in the correct project locations
+- explicit `main.xml`, `home.xml`, `video_custom.xml`, and reusable `video_tile.xml` layouts
+- a custom count field beside the YouTube URL field
+- one active WebView plus inactive visual slots generated from the requested count
 - no ads, ad SDKs, Firebase, or analytics dependencies
 
 ## Build with GitHub Actions
@@ -29,8 +29,8 @@ To use it:
 
 The imported app's 5/10/15/20/25 controls opened multiple simultaneous
 YouTube sessions to inflate views/watch time. That behavior is intentionally
-not reproduced. The controls remain as familiar entry points, but each opens
-one legitimate preview session.
+not reproduced. The clean app replaces those fixed controls with a user-entered
+layout count and one legitimate active preview player.
 
 ## Build
 
