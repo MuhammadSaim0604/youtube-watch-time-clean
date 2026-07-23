@@ -1,0 +1,70 @@
+PS C:\WINDOWS\System32> adb logcat --pid=$(adb shell pidof com.my.youtubewatchtime.view.sa)
+--------- beginning of main
+07-23 18:13:07.992 27551 27551 I tchtime.view.sa: Late-enabling -Xcheck:jni
+07-23 18:13:08.131 27551 27551 I tchtime.view.sa: Using generational CollectorTypeCMC GC.
+07-23 18:13:08.439 27551 27551 I LoadedApk: No resource references to update in package com.transsion.theme.icon
+07-23 18:13:08.487 27551 30670 I libMEOW_gift: open /data/performance/gift/arc.ini
+07-23 18:13:08.487 27551 30670 E QT      : [QT]file does not exist
+07-23 18:13:08.590 27551 27551 I tchtime.view.sa: hiddenapi: Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (runtime_flags=0, domain=platform, api=unsupported) from Landroidx/appcompat/widget/ViewUtils; (domain=app, TargetSdkVersion=35) using reflection: allowed
+07-23 18:13:08.590 27551 27551 I tchtime.view.sa: hiddenapi: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (runtime_flags=0, domain=platform, api=unsupported) from Landroidx/appcompat/widget/ViewUtils; (domain=app, TargetSdkVersion=35) using reflection: allowed
+07-23 18:13:08.664 27551 27551 I MSYNC3-VariableRefreshRate: Variable refreshrate is disabled
+07-23 18:13:08.670 27551 27551 I SurfaceFactory: [static] sSurfaceFactory = com.mediatek.view.impl.SurfaceFactoryImpl@cbd0641
+07-23 18:13:08.677 27551 30674 I PowerHalWrapper: PowerHalWrapper.getInstance
+07-23 18:13:08.723 27551 27551 I config_debug: updateDecorCaptionStatus: {1.0 410mcc1mnc [en_US] ldltr sw360dp w360dp h766dp 320dpi nrml long port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 720, 1612) mAppBounds=Rect(0, 80 - 720, 1612) mMaxBounds=Rect(0, 0 - 720, 1612) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mMultiWindowMode=normal mMultiWindowId=0 mWindowResiable=6 mInLargeScreen=-1 mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0 mDisplayUniqueId=0} s.1 fontWeightAdjustment=0} fromMultiWindow: true
+07-23 18:13:08.731 27551 30668 E OpenGLRenderer: Device claims wide gamut support, cannot find matching config, error = EGL_SUCCESS
+07-23 18:13:08.731 27551 30668 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+07-23 18:13:08.737 27551 30668 W OpenGLRenderer: ShaderCache::tranMaxTotalSize is 4194304
+07-23 18:13:08.761 27551 30668 I mali    : [DebugProp] GPU Debug-Mechanism Disable !
+07-23 18:13:08.819 27551 30668 W Parcel  : Expecting binder but got null!
+07-23 18:13:09.780 27551 30653 I tchtime.view.sa: Compiler allocated 5018KB to compile void android.view.ViewRootImpl.performTraversals()
+07-23 18:13:11.671 27551 30706 D libMEOW : meow new tls: 0xb4000075c5162100
+07-23 18:13:11.671 27551 30706 D libMEOW : applied 1 plugins for [com.my.youtubewatchtime.view.sa]:
+07-23 18:13:11.673 27551 30706 D libMEOW :   plugin 1: [libMEOW_gift.so]: 0xb400007585081030
+07-23 18:13:11.673 27551 30706 D libMEOW : rebuild call chain: 0xb4000075c51a2140
+07-23 18:13:11.673 27551 30706 D libMEOW : meow delete tls: 0xb4000075c5162100
+--------- beginning of system
+07-23 18:13:11.676 27551 27551 D TranActivityAppturboImpl: attach
+07-23 18:13:11.676 27551 27551 D TranAppturboServiceImpl: attach
+07-23 18:13:11.702 27551 27551 D AndroidRuntime: Shutting down VM
+--------- beginning of crash
+07-23 18:13:11.704 27551 27551 E AndroidRuntime: FATAL EXCEPTION: main
+07-23 18:13:11.704 27551 27551 E AndroidRuntime: Process: com.my.youtubewatchtime.view.sa, PID: 27551
+07-23 18:13:11.704 27551 27551 E AndroidRuntime: java.lang.RuntimeException: Unable to start activity ComponentInfo{com.my.youtubewatchtime.view.sa/com.my.youtubewatchtime.view.sa.HomeActivity}: java.lang.IllegalStateException: You need to use a Theme.AppCompat theme (or descendant) with this activity.
+07-23 18:13:11.704 27551 27551 E AndroidRuntime:        at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3857)
+07-23 18:13:11.704 27551 27551 E AndroidRuntime:        at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3994)
+07-23 18:13:11.704 27551 27551 E AndroidRuntime:        at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:101)
+07-23 18:13:11.704 27551 27551 E AndroidRuntime:        at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:145)
+07-23 18:13:11.704 27551 27551 E AndroidRuntime:        at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:105)
+07-23 18:13:11.704 27551 27551 E AndroidRuntime:        at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2416)
+07-23 18:13:11.704 27551 27551 E AndroidRuntime:        at android.os.Handler.dispatchMessage(Handler.java:106)
+07-23 18:13:11.704 27551 27551 E AndroidRuntime:        at android.os.Looper.loopOnce(Looper.java:204)
+07-23 18:13:11.704 27551 27551 E AndroidRuntime:        at android.os.Looper.loop(Looper.java:291)
+07-23 18:13:11.704 27551 27551 E AndroidRuntime:        at android.app.ActivityThread.main(ActivityThread.java:8168)
+07-23 18:13:11.704 27551 27551 E AndroidRuntime:        at java.lang.reflect.Method.invoke(Native Method)
+07-23 18:13:11.704 27551 27551 E AndroidRuntime:        at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:601)
+07-23 18:13:11.704 27551 27551 E AndroidRuntime:        at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1136)
+07-23 18:13:11.704 27551 27551 E AndroidRuntime: Caused by: java.lang.IllegalStateException: You need to use a Theme.AppCompat theme (or descendant) with this activity.
+07-23 18:13:11.704 27551 27551 E AndroidRuntime:        at androidx.appcompat.app.AppCompatDelegateImpl.createSubDecor(AppCompatDelegateImpl.java:926)
+07-23 18:13:11.704 27551 27551 E AndroidRuntime:        at androidx.appcompat.app.AppCompatDelegateImpl.ensureSubDecor(AppCompatDelegateImpl.java:889)
+07-23 18:13:11.704 27551 27551 E AndroidRuntime:        at androidx.appcompat.app.AppCompatDelegateImpl.setContentView(AppCompatDelegateImpl.java:772)
+07-23 18:13:11.704 27551 27551 E AndroidRuntime:        at androidx.appcompat.app.AppCompatActivity.setContentView(AppCompatActivity.java:197)
+07-23 18:13:11.704 27551 27551 E AndroidRuntime:        at com.my.youtubewatchtime.view.sa.HomeActivity.onCreate(HomeActivity.java:31)
+07-23 18:13:11.704 27551 27551 E AndroidRuntime:        at android.app.Activity.performCreate(Activity.java:8338)
+07-23 18:13:11.704 27551 27551 E AndroidRuntime:        at android.app.Activity.performCreate(Activity.java:8317)
+07-23 18:13:11.704 27551 27551 E AndroidRuntime:        at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1388)
+07-23 18:13:11.704 27551 27551 E AndroidRuntime:        at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3779)
+07-23 18:13:11.704 27551 27551 E AndroidRuntime:        ... 12 more
+07-23 18:13:11.704 27551 27551 I ExceptionHandle: at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3857)
+07-23 18:13:11.704 27551 27551 I ExceptionHandle: at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3994)
+07-23 18:13:11.704 27551 27551 I ExceptionHandle: at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:101)
+07-23 18:13:11.704 27551 27551 I ExceptionHandle: at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:145)
+07-23 18:13:11.704 27551 27551 I ExceptionHandle: at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:105)
+07-23 18:13:11.704 27551 27551 I ExceptionHandle: at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2416)
+07-23 18:13:11.704 27551 27551 I ExceptionHandle: at android.os.Handler.dispatchMessage(Handler.java:106)
+07-23 18:13:11.704 27551 27551 I ExceptionHandle: at android.os.Looper.loopOnce(Looper.java:204)
+07-23 18:13:11.704 27551 27551 I ExceptionHandle: at android.os.Looper.loop(Looper.java:291)
+07-23 18:13:11.704 27551 27551 I ExceptionHandle: at android.app.ActivityThread.main(ActivityThread.java:8168)
+07-23 18:13:11.704 27551 27551 I ExceptionHandle: at java.lang.reflect.Method.invoke(Native Method)
+07-23 18:13:11.704 27551 27551 I ExceptionHandle: at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:601)
+07-23 18:13:11.704 27551 27551 I ExceptionHandle: at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1136)
+07-23 18:13:24.272 27551 30659 I Op
