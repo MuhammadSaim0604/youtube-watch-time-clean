@@ -1,16 +1,14 @@
 # YouTube Watch Time and Views — clean Android copy
 
 This is a standalone native Android project recreated from the imported app's
-legitimate UI flow:
+UI flow:
 
 - purple splash screen with a three-second transition
 - brown/pink home screen with the original URL input and controls
 - YouTube URL validation
 - one in-app WebView preview
-- explicit `main.xml`, `home.xml`, `video_custom.xml`, and reusable `video_tile.xml` layouts
-- a custom count field beside the YouTube URL field
-- one active WebView plus inactive visual slots generated from the requested count
-- no ads, ad SDKs, Firebase, or analytics dependencies
+- original 5/10/15/20/25 WebView grid layouts
+- no advertising SDKs, Firebase, or analytics dependencies
 
 ## Build with GitHub Actions
 
@@ -27,10 +25,8 @@ To use it:
    the `main` branch.
 5. Open the completed workflow run and download the APK from **Artifacts**.
 
-The imported app's 5/10/15/20/25 controls opened multiple simultaneous
-YouTube sessions to inflate views/watch time. That behavior is intentionally
-not reproduced. The clean app replaces those fixed controls with a user-entered
-layout count and one legitimate active preview player.
+The original fixed video layouts are retained in this manually restored copy.
+Advertising and Firebase integrations have been removed.
 
 ## Build
 
