@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Youtube Watch Time and Views</string>
+    <string name="splash_title">Free Youtube Watch Time and Views</string>
+    <string name="splash_footer">TBEH TOOL</string>
+    <string name="home_title">Free Youtube Views</string>
+    <string name="url_hint">Inter Your Video URL</string>
+    <string name="open_video">Open video</string>
+    <string name="how_it_works">Warning ⚠\nHow it Work\nWatch This Video</string>
+    <string name="coming_soon">1000 Views</string>
+    <string name="video_title">Video preview</string>
+    <string name="invalid_url">Enter a valid YouTube URL first.</string>
+    <string name="single_session_notice">This clean version uses one legitimate playback session. Artificial multi-session view inflation has been removed.</string>
+    <string name="video_load_error">The video could not be loaded. Check the URL and your internet connection.</string>
+</resources>

@@ -1,0 +1,17 @@
+# Android/Gradle build output
+.gradle/
+build/
+**/build/
+*.apk
+*.aab
+
+# Local Android tooling
+local.properties
+
+# Python generated files
+__pycache__/
+*.py[cod]
+
+# IDE files
+.idea/
+*.iml

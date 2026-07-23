@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+  <LinearLayout android:gravity="center"
+                android:orientation="vertical"
+                android:id="@id/linear43"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+    <LinearLayout android:gravity="center"
+                  android:orientation="horizontal"
+                  android:id="@id/linear44"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content">
+      <WebView android:id="@id/webview17"
+               android:layout_width="150.0dp"
+               android:layout_height="150.0dp" />
+      <WebView android:id="@id/webview19"
+               android:layout_width="150.0dp"
+               android:layout_height="150.0dp" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center"
+                  android:orientation="horizontal"
+                  android:id="@id/linear45"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content">
+      <WebView android:id="@id/webview21"
+               android:layout_width="150.0dp"
+               android:layout_height="150.0dp" />
+      <WebView android:id="@id/webview22"
+               android:layout_width="150.0dp"
+               android:layout_height="150.0dp" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center"
+                  android:orientation="horizontal"
+                  android:id="@id/linear46"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content">
+      <WebView android:id="@id/webview23"
+               android:layout_width="150.0dp"
+               android:layout_height="150.0dp" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal"
+                  android:id="@id/linear47"
+                  android:padding="8.0dp"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content" />
+  </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,1 @@
+- [Clean Android copy boundary](clean-android-copy.md) — preserve the imported UI/routes while excluding ad SDKs, Firebase, and artificial multi-session view inflation.
